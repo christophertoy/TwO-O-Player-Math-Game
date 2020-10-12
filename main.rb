@@ -1,59 +1,12 @@
 require "./players"
-# class Players
-  
-#   def initialize(name)
-#     @name = name
-#     @life = 3
-#   end
-  
-#   def remove_life
-#     @life -= 1
-#   end
-
-#   def life
-#     @life
-#   end
-
-#   def name
-#     @name
-#   end
-
-#   def game_over
-#     @life == 0
-# end
-# end
-
-
-class Questions
-
-  def initialize ()
-    @num1 = rand(1..20)
-    @num2 = rand(1..20)
-    @answer = @num1 + @num2
-    puts "What does #{@num1} plus #{@num2} equal?"
-  end
-
-  def question
-    @question
-  end
-
-  def answer
-    @answer
-  end
-
-
-end
-
+require "./questions"
 
 p1 = Players.new("Player 1")
 p2 = Players.new("Player 2")
 
-# puts "----- NEW TURN -----"
-
 def turn(player)
-  
-  puts "#{player.name}:" 
   question = Questions.new()
+  puts "#{player.name}: #{question.ask}" 
 
   answer1 = gets.chomp.to_i
 
