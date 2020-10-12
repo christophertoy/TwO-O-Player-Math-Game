@@ -2,9 +2,24 @@ class Players
   
   def initialize(name)
     @name = name
-    @live = 3
+    @life = 3
+  end
+  
+  def remove_life
+    @life -= 1
   end
 
+  def life
+    @life
+  end
+
+  def name
+    @name
+  end
+
+  def game_over
+    @life == 0
+end
 end
 
 
